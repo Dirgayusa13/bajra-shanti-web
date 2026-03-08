@@ -1,0 +1,409 @@
+:root {
+    --primary-color: #ffffff; /* Latar atas putih */
+    --accent-color: #b91c1c; /* Merah gelap elegan */
+    --bg-color: #f4f6f8; /* Latar belakang web abu-abu sangat muda/bersih */
+    --text-color: #1f2937; /* Teks abu-abu gelap kehitaman */
+    --heading-color: #111827;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif; /* Font serif memberikan kesan berita profesional */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+h1, h2, h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--heading-color);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Ala Portal Berita */
+.hero {
+    background-color: var(--primary-color);
+    border-top: 5px solid var(--accent-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Mengatur ukuran Logo di Header */
+.web-logo {
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+.hero-text {
+    text-align: center;
+    flex: 1;
+    padding: 0 20px;
+}
+
+.hero-text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+    color: var(--accent-color);
+}
+
+.hero-text p {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+/* Artikel Utama */
+.news-article {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    margin-bottom: 40px;
+}
+
+.news-date {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.85rem;
+    color: #9ca3af;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Huruf besar di awal paragraf (Dropcap) */
+.dropcap {
+    float: left;
+    font-size: 3.5rem;
+    line-height: 0.8;
+    padding-top: 4px;
+    padding-right: 8px;
+    color: var(--accent-color);
+}
+
+.news-article p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Galeri / Foto & Video Berita */
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* UBAH DI SINI: Membuat Grid 2 Kolom Sejajar */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Artinya 2 kolom dengan ukuran sama rata */
+    gap: 30px;
+}
+
+.news-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Memastikan Foto DAN Video ukurannya pas di dalam kotak */
+.news-card img, 
+.news-video {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.news-card figcaption {
+    padding: 15px 10px 5px 10px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+/* Daftar Anggota JSON */
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.member-card {
+    background: white;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+    border-left: 4px solid var(--accent-color);
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.member-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+footer strong {
+    color: #fca5a5;
+}
+
+/* Bagian Komentar */
+.comments {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    margin-bottom: 50px;
+}
+
+/* Footer Modern */
+.site-footer {
+    background-color: #111827; /* Warna gelap elegan */
+    color: #e5e7eb;
+    padding: 50px 20px 20px 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-bottom: 1px solid #374151;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-social h3, .footer-contact h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.footer-social p, .footer-contact p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+/* Tombol Sosial Media */
+.social-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-social, .btn-contact {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-social {
+    background-color: #374151;
+    color: white;
+}
+
+.btn-social:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.btn-contact {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-contact:hover {
+    background-color: #991b1b;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-bottom strong {
+    color: #fca5a5;
+}
+
+/* --- DESAIN FITUR KOMENTAR --- */
+.comments-section {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    margin-bottom: 50px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comment-form input, .comment-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.btn-submit {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #991b1b;
+}
+
+/* Grid Hasil Komentar */
+.comments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.comment-box {
+    background: var(--bg-color);
+    padding: 15px;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.comment-box h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.comment-box p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.comment-date {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Header Komentar & Tombol Hapus */
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    border-bottom: 1px dashed #e5e7eb;
+    padding-bottom: 5px;
+}
+
+.comment-header h4 {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    color: var(--heading-color); /* <-- UBAH DI SINI: Menggunakan warna gelap */
+    font-weight: bold;
+}
+
+.btn-delete {
+    background: transparent;
+    border: none;
+    color: #ef4444; /* Warna merah */
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+    padding: 5px;
+}
+
+.btn-delete:hover {
+    transform: scale(1.2); /* Membesar saat diarahkan mouse */
+}
+
+/* Responsif untuk Footer di HP */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-links {
+        justify-content: center;
+    }
+}
+
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    .web-logo {
+        width: 50px;
+    }
+    /* Tambahan agar di HP galeri kembali menumpuk ke bawah (1 kolom) */
+    .gallery-grid {
+        grid-template-columns: 1fr; 
+    }
+}
