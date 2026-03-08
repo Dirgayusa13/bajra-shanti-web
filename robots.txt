@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Link ke peta situs kamu agar Google lebih cepat berkeliling
+Sitemap: https://bajrashanti.my.id/sitemap.xml
