@@ -393,16 +393,18 @@ footer strong {
 /* Responsif untuk HP */
 @media (max-width: 768px) {
     .hero-container {
-        flex-direction: column;
+        display: flex; /* Pastikan flex aktif */
+        flex-direction: row; /* PAKSA tetap ke samping, bukan column */
+        justify-content: center;
+        align-items: center;
         gap: 15px;
     }
     .hero-text h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem; /* Sedikit dikecilkan agar muat satu baris */
     }
     .web-logo {
-        width: 50px;
+        width: 45px; /* Ukuran logo disesuaikan */
     }
-    /* Tambahan agar di HP galeri kembali menumpuk ke bawah (1 kolom) */
     .gallery-grid {
         grid-template-columns: 1fr; 
     }
